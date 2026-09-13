@@ -1,17 +1,7 @@
 import speech_recognition as sr
 from pydub import AudioSegment
-from fastapi import FastAPI
 import os
-
-app = FastAPI()
-
-@app.get("/link")
-
-def link():
-    return{
-        "message": "hello from Python!"
-    }
-
+import sys
 
 def format_time(seconds):
     hours = int(seconds // 3600)

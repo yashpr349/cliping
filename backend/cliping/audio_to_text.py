@@ -3,6 +3,12 @@ from pydub import AudioSegment
 import os
 import sys
 
+path = ''
+
+if len(sys.argv) > 1:
+    path = sys.argv[1]
+
+
 def format_time(seconds):
     hours = int(seconds // 3600)
     minutes = int((seconds % 3600) // 60)
@@ -68,7 +74,7 @@ def audio_to_text(audio_path):
 
 if __name__ == "__main__":
 
-    audio_path = r"../audio.wav"
+    audio_path = path
 
     results = audio_to_text(audio_path)
 
